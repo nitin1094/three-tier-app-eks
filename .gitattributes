@@ -1,0 +1,7 @@
+# Binary assets: never apply line-ending conversion, or the files get corrupted.
+# Git's heuristic misclassifies these PDFs as text (no NUL byte early in the file),
+# and with core.autocrlf=true that would insert CR bytes into compressed streams.
+*.pdf   binary
+*.docx  binary
+*.pptx  binary
+*.xlsx  binary
